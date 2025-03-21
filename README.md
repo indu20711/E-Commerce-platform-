@@ -1,6 +1,3 @@
-# E-Commerce-platform-
-E- Commerce platform 
-# E-commerce Website
 
 ## Task Objectives
 This project is a fully functional e-commerce website designed to allow users to browse products, manage a shopping cart, authenticate themselves, and complete a checkout process. Additionally, an admin dashboard is included for product and order management. The goal is to demonstrate proficiency in web development, focusing on functionality, code quality, user experience, and clear documentation.
