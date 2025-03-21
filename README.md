@@ -30,5 +30,5 @@ This project is a fully functional e-commerce website designed to allow users to
 ### Installation
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/[your-username]/ecommerce-website.git
+   git clone https://github.com/indu20711/ecommerce-website.git
    cd ecommerce-website
