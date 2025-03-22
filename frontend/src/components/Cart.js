@@ -9,20 +9,30 @@ const Cart = () => {
     localStorage.setItem('cart', JSON.stringify(updatedCart));
   };
 
+  const checkout = () => {
+    if (cartItems.length === 0) return alert('Cart is empty');
+    alert('Checkout successful! Cart cleared.');
+    setCartItems([]);
+    localStorage.removeItem('cart');
+  };
+
   return (
-    <div>
+    <div style={{ padding: '20px' }}>
       <h2>Shopping Cart</h2>
       {cartItems.length === 0 ? (
         <p>Your cart is empty</p>
       ) : (
-        cartItems.map(item => (
-          <div key={item._id}>
-            <p>{item.name} - ${item.price}</p>
-            <button onClick={() => removeFromCart(item._id)}>Remove</button>
-          </div>
-        ))
+        <>
+          {cartItems.map(item => (
+            <div key={item._id} style={{ margin: '10px 0' }}>
+              <p>{item.name} - ${item.price}</p>
+              <button onClick={() => removeFromCart(item._id)}>Remove</button>
+            </div>
+          ))}
+          <button onClick={checkout}>Checkout</button>
+        </>
       )}
-      <button>Checkout (Simulated)</button>
+      <a href="/">Back to Home</a>
     </div>
   );
 };
